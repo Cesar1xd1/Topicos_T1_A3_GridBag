@@ -1,8 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-class Ventana extends JFrame{
-	
+
+class Ventana extends JFrame {
+	 Icon icono = new ImageIcon("ready.PNG");
+	 JButton btnSub = new JButton(icono);
 	 GridBagLayout gbl = new GridBagLayout();
 	 GridBagConstraints gbc = new GridBagConstraints();
 
@@ -98,7 +100,7 @@ class Ventana extends JFrame{
 		 JLabel email = new JLabel("              Email Address");
 		 metodoMagico(email, 4, 5, 1, 1, 2);
 	 
-		 JTextArea emailArea = new JTextArea();
+		 JTextArea emailArea = new JTextArea("@gmail.com");
 		 metodoMagico(emailArea, 5, 6, 0, 1, 2);
 		
 		 JLabel firstN = new JLabel("        Fisrt Name");
@@ -114,8 +116,8 @@ class Ventana extends JFrame{
 		 metodoMagico(lastNArea, 5, 10, 0, 1, 2);
 		 
 		 
-		 JButton btnSus = new JButton();
-		 metodoMagico(btnSus, 4, 11, 1, 1, 1);
+		 
+		 metodoMagico(btnSub, 4, 11, 1, 1, 1);
 		 
 		 
 		 JLabel copy = new JLabel("           Copy/paste onto your site");
@@ -132,6 +134,9 @@ class Ventana extends JFrame{
 		 pack();
 	     setLocationRelativeTo(null);
 	 }
+	 
+	  
+	 
 	 public void metodoMagico(JComponent c, int gx, int gy, int gw, int gh, int f){
 	        gbc.gridx = gx;
 	        gbc.gridy = gy;
@@ -142,6 +147,9 @@ class Ventana extends JFrame{
 	        add(c);
 	    }
 }
+
+
+
 
 
 public class pruebaGrid {
